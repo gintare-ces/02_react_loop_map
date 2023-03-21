@@ -1,35 +1,21 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+import './App.css';
+import Card from './components/Card';
 
-  return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+const cardsArr = [
+  {id: 1, title: 'Html', body: 'Body of Html'},
+  {id: 2, title: 'Css', body: 'Body of Css'},
+  {id: 3, title: 'JS', body: 'Body of Js'},
+]
+
+function App () {
+  return <div>
+    <h1>Hello</h1>
+    <div className='gridThree'>
+     <Card item={cardsArr[0]} size='lg' />
+     <Card item={cardsArr[1]} />
+     <Card item={cardsArr[2]} />
     </div>
-  )
+  </div>
 }
-
 export default App
