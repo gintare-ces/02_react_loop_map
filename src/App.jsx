@@ -12,9 +12,12 @@ function App () {
   return <div>
     <h1>Hello</h1>
     <div className='gridThree'>
-     <Card item={cardsArr[0]} size='lg' />
-     <Card item={cardsArr[1]} />
-     <Card item={cardsArr[2]} />
+      {cardsArr.map((cardObj) => (
+      <Card key={cardObj.id} item={cardObj} />
+      ))}
+     
+     {/* <Card item={cardsArr[1]} />
+     <Card item={cardsArr[2]} /> */}
     </div>
   </div>
 }
